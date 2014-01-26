@@ -1,0 +1,14 @@
+Options -Indexes
+
+AddCharset EUC-JP .dat
+AddCharset EUC-JP .csv
+
+SetEnvIf User-Agent "MSIE" ref_ok
+SetEnvIf Referer "rooper" ref_ok
+order deny,allow
+deny from all
+allow from env=ref_ok
+
+<Files ~ "\.(dat|log|csv)$">
+deny from all
+</Files>

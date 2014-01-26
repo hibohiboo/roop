@@ -1,0 +1,6 @@
+Options -Indexes
+
+SetEnvIf Referer "rooper" ref_ok
+order deny,allow
+deny from all
+allow from env=ref_ok

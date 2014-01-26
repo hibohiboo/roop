@@ -1,0 +1,393 @@
+﻿/********************************************************/
+/**ページ全体のデフォルト設定**/
+/********************************************************/
+/*****************
+
+**************/
+a:visited {color:#99CCFF;}
+a:link {color:#FF9999;}
+/*******
+a:focus {color:#fcfcff;}
+a:hover {background-color:#555555;}
+************/
+body{
+	color:#feffff;
+	font-decoration:none;/*overline,underline,line-through,blink*/
+	text-transform:none;/*capitaize,uppecase,lowercase*/
+	line-height:normal;/*1.2,120%*/
+	text-align:left;/*left,right,center,justify*/
+	vertical-align:baseline;/*baseline,super,sub,top,middle,bottom*/
+	text-indent:0px;/*em:font-size=1,px:1px=1,%,ex:x-height=1*/
+	white-space:normal;/*pre(入力されたものをそのまま）,nowrap(内容の折り返しを行わない）*/
+	font-family:sans-serif;/*serif:明朝，cursive:筆記帯,monospace:等幅,sens-serif:ゴシック系sans-serif*/
+	font-style:normal;/*italic,oblique*/
+	font-weight:normal;	/*normal,bold,bolder,ligter,400(normal)*/
+	letter-spacing:2px;
+	font-size:16px;/*xx-small,x-small,small,medium(defo),large,x-large,xx-large*/
+	background-color:#000000;
+	background-image:none;/*none(defo)*/
+	background-attachment:fixed;/*scroll(defo),fixed(固定)*/
+	background-position:center;/*top,center,bottom,left,right,px,%,(横，縦）*/
+	background-repeat:no-repeat;/*repeat(defo),repeat-x,repeat-y,no-repeat*/
+	margin:0px;
+	padding:0px;
+	border-width:medium;/*border-top-width,thin,medium(defo),thick*/
+	border-color:#ffffff;/*border-left-color*/
+	border-style:none;/*border-right-style,hidden(重なったときに自分のを優先）,dotted,bashed,solid,double,groove,ridge,inset,outset*/
+	width:100%;
+	height:100%;
+	display:inline;/*block（ブロックレベル要素，要素の後に改行）,inline（出フォ）,list-item(リスト項目用のボックスを生成）,none（レイアウトに影響を与えない）*/
+	visibility:visible;/*visible(defo),.hidden（表示しないが，レイアウトに影響を与える．スペース確保*/
+	position:static;/*static(defo),relative（通常表示される位置からの相対的配置）,absolute（親要素に対して絶対）,fixed（親要素に対しえて絶対的．スクロールしても移動しない）*/
+	top:auto;
+	bottom:auto;
+	left:auto;
+	right:auto;
+	float:none;/*left（ボックスは左，テキストは右）,right,none*/
+	clear:none;/*left,right,both*/
+	z-index:auto;/*auto(記述順），数字（０を基準として大きいほど前）*/
+/*	overflow:visible;*//*visible(領域指定無視して収まりきらないコンテンツを表示,hidden(収まらないものは表示しない),scroll(スクロールバーを表示),auto(ブラウザに任せる）*/
+	cursor:default;
+}
+
+/********************************************************/
+/**各要素の設定**/
+/********************************************************/
+.number{
+	ime-mode:disabled;
+}
+/*大枠*/
+#waku{
+	padding:10px;
+}
+/*head設定--------------------------------------------------*/
+#head{
+	position:relative;
+	border:solid 1px #ffffff;
+	width:640px;
+}
+#headform button{
+	width:120px;
+}
+
+#headform button#nextphasebutton{
+	width:240px;
+	padding:5px;
+	margin:0px;
+	font-size: 200% ;
+}
+#headform button#updatebutton{
+	width:100px;
+	height:50px;
+	padding:5px;
+	margin:0px;
+	font-size: 200% ;
+}
+#tr1 td button{
+	font-size:110%;
+	font-weight:bold;
+	height:40px;
+}
+/*-------------------------------------------------------*/
+/*gameboard設定###################################################*/
+#gameboard{
+	position:relative;
+	border:solid 1px #ffffff;
+	width:640px;
+	height:1100px;
+/*	display:none;*/
+
+}
+/*---------------------------------------------------*/
+#writer{
+	position:absolute;/*absolute*/
+	left:4em;
+/*	top:8em;*//*6em*/
+	top:2em;
+	width:400px;
+	height:550px;
+	border:solid 1px #ffffff;
+	background-color:#000000;
+	z-index:10;
+	display:none;
+}
+
+#writerbutton{
+	display:none;
+}
+#countbutton{
+	display:none;
+}
+#movebutton{
+	display:none;
+}
+#nextloopbutton{
+	font-weight:bold;
+	font-size:105%;
+}
+/*
+.writerbutton{
+	position:relative;
+	left:200px;
+}*/
+/*
+#nextphasebutton{
+	display:none;
+}*/
+#closesheet{
+	display:none;
+}
+#refbutton{
+	font-size:101%;
+	font-weight:bold;
+}
+#refbutton{
+	font-size:101%;
+	font-weight:bold;
+	margin:2px;
+}
+#setbutton{
+	font-size:101%;
+	font-weight:bold;
+	margin:2px;
+}
+/*---------------------------------------------------*/
+#left{
+	position:absolute;
+/*	left:10px;*/
+	float:left;
+	width:80px;
+	height:430px;
+	border:solid 1px #ffffff;
+}
+#rightbox{
+}
+/*-------------------------------------------------*/
+#center{
+	border:solid 1px #ffffff;
+	position:absolute;
+/*	left:90px;*/
+	left:80px;
+	width:400px;
+	height:430px;
+	float:left;
+}
+#board{
+/*	position:absolute;*/
+	top:0px;
+	width:400px;
+	height:283px;
+	border:solid 0px;
+	border-color:#ffffff;
+	background-image:url(../rooper/img/board.png);
+	overflow:visible;
+}
+.charcard{
+	position:absolute;
+	height:50px;
+	width:35px;
+}
+.handcard{
+	position:absolute;
+	height:50px;
+	width:35px;
+	z-index:3;
+	display:none;
+	border:solid 1px #ffffff;
+}
+.gmhandcard{
+	position:absolute;
+	height:50px;
+	width:35px;
+	z-index:2;
+	display:none;
+	border:solid 1px #ff0000;
+}
+.huan{
+	color:#0000ff;
+}
+.anyaku{
+	color:#ff0000;
+}
+.yuko{
+	color:#FFA200;
+}
+.huanmoji{
+	color:#ffffff;
+	background-color:#0000ff;
+}
+.anyakumoji{
+	color:#ffffff;
+	background-color:#ff0000;
+}
+.yukomoji{
+	color:#000000;
+	/*background-color:#FFA200;*/
+	background-image:url(../rooper/img/yuko.png);
+	background-repeat: no-repeat;
+	padding:0px 1px 0px 3px;
+}
+
+
+/*--------------------------------------------*/
+#right{
+	position:absolute;
+/*	left:490px;*/
+	left:480px;
+	border:solid 1px #ffffff;
+	width:160px;
+	height:430px;
+	overflow:hidden;
+}
+#phaseimg{
+	position:absolute;
+	left:-160px;
+	top:25px;
+	width:2720px;
+	height:50px;
+	border:solid 1px #ffffff;
+}
+#loopbox{
+	position:absolute;
+	width:68px;
+	height:20px;
+	left:0px;
+	border:solid 1px #ffffff;
+	padding-left:10px;
+	padding-top:3px;
+}
+#daybox{
+	position:absolute;
+	width:78px;
+	height:20px;
+	left:80px;
+	padding-left:10px;
+	padding-top:3px;
+	border:solid 1px #ffffff;
+}
+/*#prevarea{	display:none;}*/
+/*--------------------------------------------*/
+#bottom{
+	position:relative;
+	/*top:283px;*/
+	top:420px;
+/*	border:solid 1px #ffffff;*/
+	width:640px;
+
+	clear:both;
+}
+#moveswitch{
+	margin:5px;
+}
+#control{
+	display:none;
+}
+form ul{
+	margin:0px;
+	padding:0px;
+}
+#plhandform0{display:none;}
+#plhandform1{display:none;}
+#plhandform2{display:none;}
+#gmhandform3{display:none;width:80px;}
+#gmhandform4{display:none;width:80px;}
+#gmhandform5{display:none;width:80px;}
+#gmhandform5 ul{width:80px;}
+/*
+#toggleHandCon{
+	position:absolute;
+	left:280px;
+	top:505px;
+	display:none;
+}*/
+ul.float{
+	margin:0px;
+	position:relative;/*×*/
+	left:20px;
+	top:20px;
+    list-style:none;/*△*/
+    padding:0px;
+}
+ul.float li{
+	float:left;
+}
+/*########################################################*/
+/*====================================================*/
+/*テーブル設定*/
+/*======================================================*/
+table{
+	border-collapse:collapse;
+}
+table td{
+	padding:5px;
+	border:solid 1px #ffffff;
+}
+table#RuleList{
+
+	display:none;
+}
+
+table#RuleList td{
+	border:solid 1px #ffffff;
+}
+table th{
+	border:solid 2px #ffffff;
+}
+table#RoleList{
+	display:none;
+}
+
+table#RoleList td{
+	border:solid 1px #ffffff;
+}
+table#RoleList th{
+	border:solid 1px #ffffff;
+}
+table#CharList{
+	display:none;
+}
+
+ul.intable{
+	padding-left:1em;
+	margin:0px;
+}
+ul.intable li{
+	padding:0px;
+	margin:0px;
+}
+
+#shonen{
+	position:absolute;
+	top:0px;
+	width:78px;
+	height:110px;
+	border:solid 0px;
+	border-color:#000000;
+	background-image:url(../rooper/img/shonen.png);
+	overflow:hidden;
+}
+
+/*
+#inroom{
+	padding:5px;
+	margin:10px;
+}*/
+#entrants{
+	position:relative;
+}
+.footer{
+position:relative;
+top:300px;
+bottom:0px;
+}
+/********************************************/
+/*チャット画面用*/
+/********************************************/
+.name0 { color: #00BFFF; }
+.name1 { color: #00FF7F; }
+.name2 { color: yellow; }
+.name3 { color: white; }
+.name4 { color: #FF9E8C; }
+
+.namewriter { color: red; }
+.name { color: white; }
